@@ -872,7 +872,7 @@ class Display implements \JsonSerializable
                 $this->getLog()->debug(sprintf('There are %d authorised displays and we the maximum is %d', $countLicensed[0]['CountLicensed'], $maxDisplays));
 
                 if (intval($countLicensed[0]['CountLicensed']) + 1 > $maxDisplays) {
-                    return false;
+                    return true;
                 }
             }
         }
